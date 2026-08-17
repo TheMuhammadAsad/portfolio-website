@@ -24,8 +24,8 @@ const CHANNELS = [
   {
     icon: GithubIcon,
     label: "GitHub",
-    value: "github.com/MuhammadAsadTech",
-    href: "https://github.com/MuhammadAsadTech",
+    value: "github.com/TheMuhammadAsad",
+    href: "https://github.com/TheMuhammadAsad",
   },
 ];
 

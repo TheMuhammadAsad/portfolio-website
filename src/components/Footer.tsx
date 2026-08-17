@@ -6,7 +6,7 @@ export default function Footer() {
           © {new Date().getFullYear()} Muhammad Asad. Built with React, TypeScript & Tailwind.
         </p>
         <a
-          href="https://github.com/MuhammadAsadTech/portfolio-website"
+          href="https://github.com/TheMuhammadAsad/portfolio-website"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-xs text-[var(--color-muted)] transition-colors hover:text-[var(--color-teal)]"

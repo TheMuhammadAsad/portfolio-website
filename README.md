@@ -4,7 +4,7 @@ Personal portfolio for Muhammad Asad — Data Analyst / Data Scientist / Web Dev
 React site featuring 13 data & ML projects and 6 designed/built websites, with dynamic category
 filtering, live/case-study status badges, and links straight out to GitHub repos and live deployments.
 
-**Live site:** https://muhammadasadtech.github.io/portfolio-website/
+**Live site:** https://themuhammadasad.github.io/portfolio-website/
 
 ## Stack
 
