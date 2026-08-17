@@ -4,7 +4,7 @@ Personal portfolio for Muhammad Asad — Data Analyst / Data Scientist / Web Dev
 React site featuring 13 data & ML projects and 6 designed/built websites, with dynamic category
 filtering, live/case-study status badges, and links straight out to GitHub repos and live deployments.
 
-**Live site:** https://themuhammadasad.github.io/portfolio-website/
+**Live site:** https://themuhammadasad.github.io/
 
 ## Stack
 
@@ -46,5 +46,5 @@ npm run preview   # preview the production build
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes
-`dist/` to GitHub Pages. The Vite `base` in `vite.config.ts` is set to `/portfolio-website/` to
-match the GitHub Pages project-site URL.
+`dist/` to GitHub Pages. The repo is named `themuhammadasad.github.io`, GitHub's special "user
+site" convention, so it serves from the root domain with Vite `base` set to `/`.
