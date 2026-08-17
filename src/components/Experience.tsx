@@ -144,6 +144,14 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
+            <a
+              href="https://scholar.google.com.pk/citations?hl=en&pli=1&user=ksdPH4MAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block font-mono text-xs text-[var(--color-teal)] transition-colors hover:text-[var(--color-amber)]"
+            >
+              Full list on Google Scholar &rarr;
+            </a>
           </motion.div>
         </div>
       </div>

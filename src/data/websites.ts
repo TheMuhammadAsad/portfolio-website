@@ -15,8 +15,8 @@ export const clientSites: ClientSite[] = [
     name: "SmartPath AI",
     tagline: "Enterprise AI consultancy platform",
     description:
-      "Corporate site for an enterprise AI consultancy spanning 8 service lines and 8 industry verticals — independently designed, built, and deployed end to end, including hosting and domain management.",
-    role: "Own product — full-stack build & deployment",
+      "Corporate site for an enterprise AI consultancy spanning 8 service lines and 8 industry verticals — designed, built, and deployed end to end for the client, including hosting and domain management.",
+    role: "Freelance client work",
     screenshot: "/screenshots/smartpath-ai.jpg",
     live: "https://smpathai.com",
     status: "Live",
@@ -26,8 +26,8 @@ export const clientSites: ClientSite[] = [
     name: "SmartPath AI — Healthcare",
     tagline: "HIPAA-aligned front-office automation for clinics",
     description:
-      "The healthcare-vertical product site: AI scheduling, 24/7 phone answering, patient intake automation, and no-show prediction for clinics — a separate design and positioning from the corporate site above.",
-    role: "Own product — full-stack build & deployment",
+      "The healthcare-vertical site for the same client: AI scheduling, 24/7 phone answering, patient intake automation, and no-show prediction for clinics — a separate design and positioning from the corporate site above.",
+    role: "Freelance client work",
     screenshot: "/screenshots/smartpath-healthcare.jpg",
     live: "https://healthcare.smpathai.com",
     status: "Live",
@@ -75,5 +75,15 @@ export const clientSites: ClientSite[] = [
     screenshot: "/screenshots/fmax-fashion.jpg",
     live: "https://fmaxfashion.com/",
     status: "Live",
+  },
+  {
+    slug: "kode-consultancy",
+    name: "Kode Consultancy",
+    tagline: "HR recruitment & ATS landing page",
+    description:
+      "A recruitment consultancy landing page pitching an ATS-driven hiring product — story/commitment sections, a client testimonial strip, and a demo-request contact form.",
+    role: "Freelance client work",
+    screenshot: "/screenshots/kode-consultancy.jpg",
+    status: "Case Study",
   },
 ];

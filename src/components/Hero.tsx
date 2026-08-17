@@ -3,7 +3,7 @@ import { ArrowDownRight, MapPin } from "lucide-react";
 
 const STATS = [
   { value: "13+", label: "Data & ML projects" },
-  { value: "6+", label: "Websites designed & built" },
+  { value: "7+", label: "Websites designed & built" },
   { value: "5+", label: "Peer-reviewed publications" },
   { value: "2", label: "Engineering disciplines" },
 ];

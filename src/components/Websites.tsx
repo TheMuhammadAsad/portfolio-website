@@ -15,12 +15,12 @@ export default function Websites() {
           Web Design & Development
         </p>
         <h2 className="mt-3 font-display text-3xl font-medium text-[var(--color-text)] sm:text-4xl">
-          6+ websites, designed and built
+          7+ websites, designed and built
         </h2>
         <p className="mt-4 max-w-2xl text-[var(--color-muted)]">
-          Two are my own SmartPath AI product sites; the rest is freelance client work — including a
-          set of pages built for ProLayers and a real e-commerce catalog for a Karachi-based fashion
-          brand.
+          All freelance client work — including SmartPath AI's corporate and healthcare platforms, a
+          set of pages built for ProLayers, an e-commerce catalog for a Karachi-based fashion brand,
+          and a recruitment consultancy landing page.
         </p>
       </motion.div>
 

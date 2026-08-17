@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, GraduationCap } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 
 const CHANNELS = [
@@ -18,14 +18,20 @@ const CHANNELS = [
   {
     icon: LinkedinIcon,
     label: "LinkedIn",
-    value: "linkedin.com/in/themuhammadasad",
+    value: "LinkedIn",
     href: "https://linkedin.com/in/themuhammadasad",
   },
   {
     icon: GithubIcon,
     label: "GitHub",
-    value: "github.com/TheMuhammadAsad",
+    value: "GitHub",
     href: "https://github.com/TheMuhammadAsad",
+  },
+  {
+    icon: GraduationCap,
+    label: "Google Scholar",
+    value: "Google Scholar",
+    href: "https://scholar.google.com.pk/citations?hl=en&pli=1&user=ksdPH4MAAAAJ",
   },
 ];
 
@@ -54,17 +60,17 @@ export default function Contact() {
           Savona, Italy
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {CHANNELS.map((channel) => (
             <a
               key={channel.label}
               href={channel.href}
               target={channel.href.startsWith("http") ? "_blank" : undefined}
               rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex flex-col items-center gap-2 rounded-2xl border border-[var(--color-line)] px-4 py-5 transition-colors hover:border-[var(--color-teal)]"
+              className="group flex min-w-0 flex-col items-center gap-2 rounded-2xl border border-[var(--color-line)] px-4 py-5 transition-colors hover:border-[var(--color-teal)]"
             >
               <channel.icon size={20} className="text-[var(--color-teal)]" />
-              <span className="font-mono text-xs text-[var(--color-muted)] group-hover:text-[var(--color-text)]">
+              <span className="break-words text-center font-mono text-xs text-[var(--color-muted)] group-hover:text-[var(--color-text)]">
                 {channel.value}
               </span>
             </a>

@@ -29,6 +29,7 @@ export const projects: Project[] = [
     categories: ["Full-Stack", "Energy"],
     tech: ["FastAPI", "PostgreSQL", "Next.js", "TypeScript", "Docker", "GitHub Actions"],
     github: "https://github.com/TheMuhammadAsad/energy-intelligence-platform",
+    image: "/previews/energy-intelligence-platform.jpg",
     featured: true,
   },
   {
@@ -135,8 +136,9 @@ export const projects: Project[] = [
     description:
       "Business analytics entirely in SQL — CTEs, window functions, and RFM customer segmentation over a relational sales database.",
     categories: ["Data Analysis"],
-    tech: ["SQL", "PostgreSQL", "Window functions"],
+    tech: ["SQL", "SQLite", "Window functions"],
     github: "https://github.com/TheMuhammadAsad/sql-revenue-retention-analytics",
+    image: "/previews/sql-revenue-retention-analytics.jpg",
   },
   {
     slug: "retail-sales-performance-dashboard-powerbi",
