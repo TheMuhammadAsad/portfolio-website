@@ -17,6 +17,7 @@ export interface Project {
   live?: string;
   liveLabel?: string;
   featured?: boolean;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     categories: ["Machine Learning", "Data Analysis"],
     tech: ["Python", "scikit-learn", "XGBoost", "Streamlit", "Plotly"],
     github: "https://github.com/TheMuhammadAsad/fraud-detection-analysis",
+    image: "/previews/fraud-detection-analysis.jpg",
     live: "https://fraud-detection-analyse.streamlit.app/",
     liveLabel: "Live dashboard",
     featured: true,
@@ -50,6 +52,7 @@ export const projects: Project[] = [
     categories: ["Machine Learning"],
     tech: ["TensorFlow", "Keras", "Grad-CAM", "Python"],
     github: "https://github.com/TheMuhammadAsad/image-classification-cnn",
+    image: "/previews/image-classification-cnn.jpg",
     featured: true,
   },
   {
@@ -60,6 +63,7 @@ export const projects: Project[] = [
     categories: ["Statistics", "Data Analysis"],
     tech: ["Python", "pandas", "SciPy", "NumPy"],
     github: "https://github.com/TheMuhammadAsad/ab-testing-retention-analysis",
+    image: "/previews/ab-testing-retention-analysis.jpg",
     featured: true,
   },
   {
@@ -70,6 +74,7 @@ export const projects: Project[] = [
     categories: ["Machine Learning", "Energy"],
     tech: ["XGBoost", "TensorFlow", "LSTM", "pandas"],
     github: "https://github.com/TheMuhammadAsad/energy-demand-forecasting-deep-learning",
+    image: "/previews/energy-demand-forecasting-deep-learning.jpg",
   },
   {
     slug: "network-intrusion-detection",
@@ -79,6 +84,7 @@ export const projects: Project[] = [
     categories: ["Machine Learning"],
     tech: ["Random Forest", "XGBoost", "scikit-learn"],
     github: "https://github.com/TheMuhammadAsad/network-intrusion-detection",
+    image: "/previews/network-intrusion-detection.jpg",
   },
   {
     slug: "customer-churn-prediction",
@@ -88,6 +94,7 @@ export const projects: Project[] = [
     categories: ["Machine Learning"],
     tech: ["scikit-learn", "SHAP", "Python"],
     github: "https://github.com/TheMuhammadAsad/customer-churn-prediction",
+    image: "/previews/customer-churn-prediction.jpg",
   },
   {
     slug: "oil-production-decline-analysis",
@@ -97,6 +104,7 @@ export const projects: Project[] = [
     categories: ["Petroleum", "Data Analysis"],
     tech: ["Python", "SciPy", "Arps models"],
     github: "https://github.com/TheMuhammadAsad/oil-production-decline-analysis",
+    image: "/previews/oil-production-decline-analysis.jpg",
     featured: true,
   },
   {
@@ -107,6 +115,7 @@ export const projects: Project[] = [
     categories: ["Energy", "Data Analysis"],
     tech: ["Streamlit", "Plotly", "pandas"],
     github: "https://github.com/TheMuhammadAsad/energy-transition-dashboard",
+    image: "/previews/energy-transition-dashboard.jpg",
     live: "https://energy-transition-dashboard.streamlit.app/",
     liveLabel: "Live dashboard",
   },
@@ -118,6 +127,7 @@ export const projects: Project[] = [
     categories: ["Data Analysis", "Energy", "Statistics"],
     tech: ["Python", "pandas", "SciPy"],
     github: "https://github.com/TheMuhammadAsad/europe-energy-transition-analysis",
+    image: "/previews/europe-energy-transition-analysis.jpg",
   },
   {
     slug: "sql-revenue-retention-analytics",
@@ -136,6 +146,7 @@ export const projects: Project[] = [
     categories: ["Power BI", "Data Analysis"],
     tech: ["Power BI", "DAX", "Power Query"],
     github: "https://github.com/TheMuhammadAsad/retail-sales-performance-dashboard-powerbi",
+    image: "/previews/retail-sales-performance-dashboard-powerbi.jpg",
   },
   {
     slug: "global-health-economic-dashboard-powerbi",
@@ -145,6 +156,7 @@ export const projects: Project[] = [
     categories: ["Power BI", "Data Analysis"],
     tech: ["Power BI", "DAX", "Power Query"],
     github: "https://github.com/TheMuhammadAsad/global-health-economic-dashboard-powerbi",
+    image: "/previews/global-health-economic-dashboard-powerbi.jpg",
   },
 ];
 

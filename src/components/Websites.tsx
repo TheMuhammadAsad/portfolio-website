@@ -15,7 +15,7 @@ export default function Websites() {
           Web Design & Development
         </p>
         <h2 className="mt-3 font-display text-3xl font-medium text-[var(--color-text)] sm:text-4xl">
-          6 websites, designed and built
+          6+ websites, designed and built
         </h2>
         <p className="mt-4 max-w-2xl text-[var(--color-muted)]">
           Two are my own SmartPath AI product sites; the rest is freelance client work — including a

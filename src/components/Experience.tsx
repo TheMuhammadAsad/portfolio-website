@@ -53,7 +53,7 @@ const EDUCATION = [
 
 const PUBLICATIONS = [
   "5+ peer-reviewed papers in Chemical Papers and Arabian Journal for Science & Engineering",
-  "SPE ADIPEC 2023 — Taro Mucilage as Green Inhibitor in Water-based Drilling Fluid",
+  "SPE ADIPEC 2023 — Investigating the Effect of Salt, Polymer and Magnetic Nanoparticles on Critical Drilling Parameters, Coupled with a Novel 3D Image Processing Technique",
   "ACS Acknowledged Work — Carbon Capture and Storage (CCS) in Oil and Gas",
   "Geothermal Rising Student Contest (Abstract Selected) — Enhanced Geothermal Systems: Global Challenges & Strategies",
 ];

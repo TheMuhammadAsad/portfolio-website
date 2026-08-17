@@ -24,7 +24,7 @@ export default function Projects() {
       >
         <p className="font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-teal)]">Projects</p>
         <h2 className="mt-3 font-display text-3xl font-medium text-[var(--color-text)] sm:text-4xl">
-          13 real, end-to-end analyses
+          13+ real, end-to-end analyses
         </h2>
         <p className="mt-4 max-w-2xl text-[var(--color-muted)]">
           Every project uses real public or client data, ships real code and tests, and documents
@@ -58,56 +58,68 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.25 }}
-              className="flex flex-col rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)]"
             >
-              <div className="flex flex-wrap gap-1.5">
-                {project.categories.map((c) => (
-                  <span
-                    key={c}
-                    className="rounded-full bg-[var(--color-surface-2)] px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-[var(--color-teal)]"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
+              {project.image && (
+                <div className="h-40 overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-surface-2)]">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`}
+                    alt={`${project.title} preview`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
 
-              <h3 className="mt-4 font-display text-lg font-medium text-[var(--color-text)]">
-                {project.title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--color-muted)]">
-                {project.description}
-              </p>
+              <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.categories.map((c) => (
+                    <span
+                      key={c}
+                      className="rounded-full bg-[var(--color-surface-2)] px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-[var(--color-teal)]"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
 
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {project.tech.map((t) => (
-                  <span key={t} className="font-mono text-[11px] text-[var(--color-muted)]">
-                    {t}
-                    {t !== project.tech[project.tech.length - 1] ? " ·" : ""}
-                  </span>
-                ))}
-              </div>
+                <h3 className="mt-4 font-display text-lg font-medium text-[var(--color-text)]">
+                  {project.title}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--color-muted)]">
+                  {project.description}
+                </p>
 
-              <div className="mt-5 flex items-center gap-4 border-t border-[var(--color-line)] pt-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-text)] transition-colors hover:text-[var(--color-teal)]"
-                >
-                  <GithubIcon size={14} />
-                  Code
-                </a>
-                {project.live && (
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {project.tech.map((t) => (
+                    <span key={t} className="font-mono text-[11px] text-[var(--color-muted)]">
+                      {t}
+                      {t !== project.tech[project.tech.length - 1] ? " ·" : ""}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-5 flex items-center gap-4 border-t border-[var(--color-line)] pt-4">
                   <a
-                    href={project.live}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-teal)] transition-colors hover:text-[var(--color-amber)]"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-text)] transition-colors hover:text-[var(--color-teal)]"
                   >
-                    <ExternalLink size={14} />
-                    {project.liveLabel ?? "Live"}
+                    <GithubIcon size={14} />
+                    Code
                   </a>
-                )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-teal)] transition-colors hover:text-[var(--color-amber)]"
+                    >
+                      <ExternalLink size={14} />
+                      {project.liveLabel ?? "Live"}
+                    </a>
+                  )}
+                </div>
               </div>
             </motion.article>
           ))}
