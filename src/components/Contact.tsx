@@ -44,8 +44,9 @@ export default function Contact() {
           Let's build something worth measuring.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[var(--color-muted)]">
-          Open to data analyst / data scientist roles, energy-domain data work, and freelance web
-          projects. Based in Savona, Italy — happy to work remotely.
+          Open to data analyst / data scientist, web developer, and automation roles, plus
+          energy-domain data work and freelance web projects. Based in Savona, Italy — happy to
+          work remotely.
         </p>
 
         <div className="mt-6 flex items-center justify-center gap-2 font-mono text-sm text-[var(--color-muted)]">

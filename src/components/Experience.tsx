@@ -45,17 +45,17 @@ const EDUCATION = [
     org: "NED University of Engineering and Technology, Karachi — CGPA 3.619/4.0",
   },
   {
-    period: "2024",
+    period: "Feb 2022 — Aug 2024",
     title: "Certified Cloud Native Developer",
     org: "Presidential Initiative for AI & Computing (PIAIC), Batch 36",
   },
 ];
 
 const PUBLICATIONS = [
+  "5+ peer-reviewed papers in Chemical Papers and Arabian Journal for Science & Engineering",
   "SPE ADIPEC 2023 — Taro Mucilage as Green Inhibitor in Water-based Drilling Fluid",
   "ACS Acknowledged Work — Carbon Capture and Storage (CCS) in Oil and Gas",
   "Geothermal Rising Student Contest (Abstract Selected) — Enhanced Geothermal Systems: Global Challenges & Strategies",
-  "5+ peer-reviewed papers in Chemical Papers and Arabian Journal for Science & Engineering",
 ];
 
 export default function Experience() {
