@@ -1,3 +1,4 @@
+import LoadingScreen from "./components/LoadingScreen";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,10 +8,12 @@ import Experience from "./components/Experience";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <LoadingScreen />
       <Nav />
       <main>
         <Hero />
@@ -22,6 +25,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
