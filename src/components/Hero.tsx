@@ -37,10 +37,10 @@ export default function Hero() {
             products people use.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-muted)]">
-            Petroleum engineer turned data scientist, currently pursuing a Master's in Energy
-            Engineering at the University of Genoa. I build statistically rigorous analysis,
-            production-shaped ML pipelines, and full-stack web products — and I design and ship
-            client websites on the side.
+            Petroleum engineering graduate and data analyst currently pursuing a Master's in
+            Energy Engineering at the University of Genoa. I build statistically rigorous
+            analysis, production-shaped ML pipelines, and full-stack web products — and I design
+            and ship client websites on the side.
           </p>
 
           <div className="mt-4 flex items-center gap-2 font-mono text-sm text-[var(--color-muted)]">

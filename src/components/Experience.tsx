@@ -36,7 +36,7 @@ const ROLES = [
 const EDUCATION = [
   {
     period: "Sept 2025 — Present",
-    title: "Master in Energy Engineering",
+    title: "Master's in Energy Engineering",
     org: "University of Genoa, Savona Campus, Italy",
   },
   {
