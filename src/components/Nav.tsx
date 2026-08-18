@@ -15,11 +15,28 @@ const RESUME_URL = `${import.meta.env.BASE_URL}Muhammad-Asad-CV.pdf`;
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState<string>("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = LINKS.map((l) => document.getElementById(l.href.slice(1))).filter(
+      (el): el is HTMLElement => el !== null,
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -40,9 +57,15 @@ export default function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono text-sm text-[var(--color-muted)] transition-colors hover:text-[var(--color-teal)]"
+                className="relative font-mono text-sm transition-colors"
+                style={{
+                  color: active === link.href ? "var(--color-teal)" : "var(--color-muted)",
+                }}
               >
                 {link.label}
+                {active === link.href && (
+                  <span className="absolute -bottom-1.5 left-0 h-px w-full bg-[var(--color-teal)]" />
+                )}
               </a>
             </li>
           ))}

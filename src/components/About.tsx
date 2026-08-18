@@ -19,6 +19,12 @@ const SKILL_GROUPS = [
   },
 ];
 
+const GALLERY = [
+  { src: "genoa-04.jpg", rotate: -7, x: -18, y: 10, border: "teal", z: 1 },
+  { src: "genoa-03.jpg", rotate: 8, x: 22, y: 24, border: "amber", z: 2 },
+  { src: "genoa-01.jpg", rotate: -2, x: 0, y: 0, border: "amber", z: 3 },
+];
+
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-24">
@@ -27,7 +33,7 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5 }}
-        className="grid gap-16 md:grid-cols-[1fr_1.1fr]"
+        className="grid gap-16 md:grid-cols-[1.1fr_0.9fr] md:items-center"
       >
         <div>
           <p className="font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-teal)]">About</p>
@@ -47,41 +53,70 @@ export default function About() {
               and data analytics as a Certified Cloud Native Developer (PIAIC).
             </p>
             <p>
-              I'm now pursuing a Master's in Energy Engineering at the University of Genoa, building
-              a portfolio that spans statistically rigorous analysis, production-shaped ML pipelines,
+              I'm now pursuing a Master's in Energy Engineering at the{" "}
+              <span className="text-[var(--color-amber)]">University of Genoa</span>, building a
+              portfolio that spans statistically rigorous analysis, production-shaped ML pipelines,
               and full-stack products — while designing and shipping real client websites on the
               side as a freelance web developer.
             </p>
           </div>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          {SKILL_GROUPS.map((group, i) => (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative mx-auto h-72 w-full max-w-sm sm:h-80"
+        >
+          {GALLERY.map((photo, i) => (
+            <motion.img
+              key={photo.src}
+              src={`${import.meta.env.BASE_URL}images/gallery/${photo.src}`}
+              alt="Muhammad Asad in Genoa, Italy"
+              initial={{ opacity: 0, rotate: photo.rotate, x: photo.x, y: photo.y + 20 }}
+              whileInView={{ opacity: 1, rotate: photo.rotate, x: photo.x, y: photo.y }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5"
-            >
-              <h3 className="font-display text-base font-medium text-[var(--color-text)]">
-                {group.title}
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-[var(--color-line)] px-3 py-1 font-mono text-xs text-[var(--color-muted)]"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              whileHover={{ rotate: 0, scale: 1.08, zIndex: 10 }}
+              transition={{ duration: 0.5, delay: 0.3 + i * 0.12 }}
+              className="absolute top-1/2 left-1/2 h-64 w-48 -translate-x-1/2 -translate-y-1/2 rounded-2xl border-2 object-cover shadow-2xl sm:h-72 sm:w-56"
+              style={{
+                borderColor:
+                  photo.border === "amber" ? "var(--color-amber)" : "var(--color-teal)",
+                zIndex: photo.z,
+              }}
+            />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
+
+      <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {SKILL_GROUPS.map((group, i) => (
+          <motion.div
+            key={group.title}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.4, delay: i * 0.08 }}
+            whileHover={{ y: -4 }}
+            className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] p-5 transition-colors hover:border-[var(--color-teal)]/40"
+          >
+            <h3 className="font-display text-base font-medium text-[var(--color-text)]">
+              {group.title}
+            </h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-[var(--color-line)] px-3 py-1 font-mono text-xs text-[var(--color-muted)]"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
 import { projects, categoryOrder, type ProjectCategory } from "../data/projects";
 
@@ -58,8 +58,15 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.25 }}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)]"
+              whileHover={{ y: -5 }}
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] transition-colors hover:border-[var(--color-teal)]/40"
             >
+              {project.featured && (
+                <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-[var(--color-amber)] px-2.5 py-1 font-mono text-[10px] font-medium text-[var(--color-ink)] shadow-lg">
+                  <Sparkles size={11} />
+                  Featured
+                </span>
+              )}
               {project.image && (
                 <div className="h-40 overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-surface-2)]">
                   <img

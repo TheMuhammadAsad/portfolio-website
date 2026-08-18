@@ -32,7 +32,8 @@ export default function Websites() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
-            className="group overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)]"
+            whileHover={{ y: -5 }}
+            className="group overflow-hidden rounded-2xl border border-[var(--color-line)] bg-[var(--color-surface)] transition-colors hover:border-[var(--color-amber)]/40"
           >
             <div className="relative h-44 overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-surface-2)]">
               <img
