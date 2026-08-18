@@ -53,11 +53,10 @@ export default function About() {
               and data analytics as a Certified Cloud Native Developer (PIAIC).
             </p>
             <p>
-              I'm now pursuing a Master's in Energy Engineering at the{" "}
-              <span className="text-[var(--color-amber)]">University of Genoa</span>, building a
-              portfolio that spans statistically rigorous analysis, production-shaped ML pipelines,
-              and full-stack products — while designing and shipping real client websites on the
-              side as a freelance web developer.
+              I'm now pursuing a Master's in Energy Engineering at the University of Genoa,
+              building a portfolio that spans statistically rigorous analysis, production-shaped ML
+              pipelines, and full-stack products — while designing and shipping real client websites
+              on the side as a freelance web developer.
             </p>
           </div>
         </div>

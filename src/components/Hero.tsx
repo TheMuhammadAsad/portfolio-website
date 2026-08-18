@@ -3,11 +3,11 @@ import { ArrowDownRight, MapPin } from "lucide-react";
 import AnimatedNumber from "./AnimatedNumber";
 
 const STATS = [
-  { value: "13+", label: "Data & ML projects", accent: "teal" },
-  { value: "7+", label: "Websites designed & built", accent: "teal" },
-  { value: "5+", label: "Peer-reviewed publications", accent: "amber" },
-  { value: "2", label: "Engineering disciplines", accent: "teal" },
-] as const;
+  { value: "13+", label: "Data & ML projects" },
+  { value: "7+", label: "Websites designed & built" },
+  { value: "5+", label: "Peer-reviewed publications" },
+  { value: "2", label: "Engineering disciplines" },
+];
 
 export default function Hero() {
   return (
@@ -98,10 +98,7 @@ export default function Hero() {
       >
         {STATS.map((stat) => (
           <div key={stat.label}>
-            <dt
-              className="font-display text-3xl"
-              style={{ color: stat.accent === "amber" ? "var(--color-amber)" : "var(--color-teal)" }}
-            >
+            <dt className="font-display text-3xl text-[var(--color-teal)]">
               <AnimatedNumber value={stat.value} />
             </dt>
             <dd className="mt-1 font-mono text-xs uppercase tracking-wide text-[var(--color-muted)]">
