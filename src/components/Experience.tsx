@@ -11,6 +11,15 @@ const ROLES = [
     ],
   },
   {
+    period: "2023 — Present",
+    title: "Freelance Web Developer",
+    org: "Self-employed, Remote",
+    points: [
+      "Design and build client websites end to end — UI design, front-end development, hosting, and domain management — for clients including SmartPath AI and ProLayers.",
+      "Delivered 7+ production websites spanning SaaS/consultancy platforms, e-commerce catalogs, and marketing sites.",
+    ],
+  },
+  {
     period: "May 2021 — Aug 2023",
     title: "Research Assistant",
     org: "NED University of Engineering and Technology, Karachi",
@@ -24,12 +33,6 @@ const ROLES = [
     title: "Data Analyst Intern",
     org: "GlobalShala (Sponsored by Saint Louis University), Remote",
     points: ["Delivered audience-tailored data presentations and analysis for non-technical stakeholders."],
-  },
-  {
-    period: "Oct 2022 — Nov 2022",
-    title: "Engineering Intern",
-    org: "Oil & Gas Development Company (OGDCL), Hyderabad",
-    points: ["Observed field operations and jet pump equipment across surface and subsurface systems."],
   },
 ];
 

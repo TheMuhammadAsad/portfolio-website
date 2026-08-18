@@ -1,18 +1,28 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
 import { projects, categoryOrder, type ProjectCategory } from "../data/projects";
 
 const FILTERS: ("All" | ProjectCategory)[] = ["All", ...categoryOrder];
+const INITIAL_COUNT = 6;
 
 export default function Projects() {
   const [filter, setFilter] = useState<"All" | ProjectCategory>("All");
+  const [expanded, setExpanded] = useState(false);
 
-  const visible = useMemo(() => {
-    if (filter === "All") return projects;
-    return projects.filter((p) => p.categories.includes(filter));
+  const filtered = useMemo(() => {
+    const list = filter === "All" ? projects : projects.filter((p) => p.categories.includes(filter));
+    return list.slice().sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
   }, [filter]);
+
+  const visible = expanded ? filtered : filtered.slice(0, INITIAL_COUNT);
+  const hasMore = filtered.length > INITIAL_COUNT;
+
+  function selectFilter(f: "All" | ProjectCategory) {
+    setFilter(f);
+    setExpanded(false);
+  }
 
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-24">
@@ -35,7 +45,7 @@ export default function Projects() {
           {FILTERS.map((f) => (
             <button
               key={f}
-              onClick={() => setFilter(f)}
+              onClick={() => selectFilter(f)}
               className={`rounded-full border px-4 py-1.5 font-mono text-xs transition-colors ${
                 filter === f
                   ? "border-[var(--color-teal)] bg-[var(--color-teal)] text-[var(--color-ink)]"
@@ -136,6 +146,29 @@ export default function Projects() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {hasMore && (
+        <div className="mt-10 flex justify-center">
+          <motion.button
+            onClick={() => setExpanded((v) => !v)}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] px-6 py-3 font-mono text-sm text-[var(--color-text)] transition-colors hover:border-[var(--color-teal)] hover:text-[var(--color-teal)]"
+          >
+            {expanded ? (
+              <>
+                Show less
+                <ChevronUp size={16} />
+              </>
+            ) : (
+              <>
+                Show all {filtered.length} projects
+                <ChevronDown size={16} />
+              </>
+            )}
+          </motion.button>
+        </div>
+      )}
     </section>
   );
 }

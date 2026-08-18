@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, GraduationCap } from "lucide-react";
+import { Mail, MapPin, GraduationCap } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 
 const CHANNELS = [
@@ -8,12 +8,6 @@ const CHANNELS = [
     label: "Email",
     value: "asadishaq06@gmail.com",
     href: "mailto:asadishaq06@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+39 350 8896596",
-    href: "tel:+393508896596",
   },
   {
     icon: LinkedinIcon,
@@ -60,7 +54,7 @@ export default function Contact() {
           Savona, Italy
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CHANNELS.map((channel) => (
             <a
               key={channel.label}
