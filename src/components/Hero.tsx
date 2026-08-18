@@ -29,9 +29,9 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="font-mono text-sm uppercase tracking-[0.2em] text-[var(--color-teal)]">
-            Data Analyst · Data Scientist · Web Developer
+            Energy Data Analyst · Data Scientist
           </p>
-          <h1 className="mt-4 font-display text-5xl leading-[1.05] font-medium text-[var(--color-text)] sm:text-6xl">
+          <h1 className="mt-4 font-display text-[2.5rem] leading-[1.08] font-medium text-[var(--color-text)] sm:text-5xl lg:text-6xl">
             Turning messy data and{" "}
             <span className="italic text-[var(--color-teal)]">energy-domain expertise</span> into
             products people use.
@@ -85,6 +85,10 @@ export default function Hero() {
           <img
             src={`${import.meta.env.BASE_URL}images/profile.jpg`}
             alt="Muhammad Asad"
+            width={420}
+            height={540}
+            loading="eager"
+            decoding="async"
             className="relative aspect-[4/5] w-full rounded-3xl border border-[var(--color-line)] object-cover shadow-2xl"
           />
         </motion.div>

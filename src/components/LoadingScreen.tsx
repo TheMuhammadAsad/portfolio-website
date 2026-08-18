@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const LINES = [
   { prompt: "whoami", response: "Muhammad Asad" },
-  { prompt: "role --list", response: "Data Analyst · Data Scientist · Web Developer" },
+  { prompt: "role --list", response: "Energy Data Analyst · Data Scientist" },
   { prompt: "status", response: "Loading portfolio..." },
 ];
 

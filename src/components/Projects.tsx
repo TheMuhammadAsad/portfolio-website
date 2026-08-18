@@ -72,6 +72,10 @@ export default function Projects() {
                   <img
                     src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`}
                     alt={`${project.title} preview`}
+                    loading="lazy"
+                    decoding="async"
+                    width={900}
+                    height={160}
                     className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>

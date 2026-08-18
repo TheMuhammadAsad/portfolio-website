@@ -39,6 +39,10 @@ export default function Websites() {
               <img
                 src={`${import.meta.env.BASE_URL}${site.screenshot.replace(/^\//, "")}`}
                 alt={`${site.name} homepage`}
+                loading="lazy"
+                decoding="async"
+                width={900}
+                height={176}
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
               <span

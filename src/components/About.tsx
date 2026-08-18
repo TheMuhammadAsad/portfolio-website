@@ -73,6 +73,8 @@ export default function About() {
               key={photo.src}
               src={`${import.meta.env.BASE_URL}images/gallery/${photo.src}`}
               alt="Muhammad Asad in Genoa, Italy"
+              loading="lazy"
+              decoding="async"
               initial={{ opacity: 0, rotate: photo.rotate, x: photo.x, y: photo.y + 20 }}
               whileInView={{ opacity: 1, rotate: photo.rotate, x: photo.x, y: photo.y }}
               viewport={{ once: true, margin: "-60px" }}
